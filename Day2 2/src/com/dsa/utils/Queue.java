@@ -1,0 +1,7 @@
+package com.dsa.utils;
+
+public interface Queue<T> {
+    void enqueue(T element);
+    T dequeue();
+    boolean isEmpty();
+}

@@ -1,0 +1,26 @@
+package test;
+
+import java.time.LocalDate;
+
+public class ServiceBooking extends Booking {
+
+    private static final long serialVersionUID = 1L;
+
+	public ServiceBooking(String customerName, String vehicleNumber, ServiceType serviceType, LocalDate serviceDate) {
+        super(customerName, vehicleNumber, serviceType, serviceDate);
+    }
+
+    @Override
+    public double calculateServiceCost() {
+        switch (serviceType) {
+            case REGULAR:
+                return 1000;
+            case REPAIR:
+                return 3000;
+            case CLEANING:
+                return 500;
+            default:
+                return 0;
+        }
+    }
+}
